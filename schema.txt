@@ -1,0 +1,33 @@
+1. Barre de recherche :
+        > Trouver le pokemon avec :
+                > Nom (n'importe quelle langue)
+                > ID
+                (> Couleur)
+                > Type
+                
+    Si aucun Pokémon n'est présent = erreur
+
+
+
+2. Affiche tout les pokemons dans une card :
+        > Image (centrer) (https://assets.pokemon.com/assets/cms2/img/pokedex/detail/$NDEX.png) $NDEX = nom du pokemon
+        > ID #XXX (Aligné à gauche)
+        > Nom (Aligné à gauche)
+
+    Si aucun Pokémon n'est présent = erreur
+
+
+
+3. Sytème pour changer Dark/Light Theme
+
+
+
+(4. Système pour changer la langue)
+
+
+
+5. Page avec le Pokemon choisit :
+        > Fleche pour le retour
+        > ID #XXX
+        > Nom du Pokemon
+        > ... TOUTES LES INFOS DU POKEMON
