@@ -7,20 +7,13 @@ const pokedex = fs.readFileSync('data/pokedex.json');
 const itemList = JSON.parse(pokedex);
 
 
-router.get('/api/pokemons', (req, res) => {
+router.get('/api/:language/pokemons', (req, res) => {
   if (!itemList) {
       return res.status(400).send("Sorry Pokemons not found")
   }
   res.json(itemList);
 })
 
-
-router.get('/api/pokemons/:id', (req, res) => {
-  if (!itemList[req.params.id - 1]) {
-      return res.status(400).send("Sorry the specific Pokemon not found");
-  }
-  res.json(itemList[req.params.id - 1]);
-})
 
 
 router.get('/api/:language/pokemons/info', (req, res) => {
