@@ -31,3 +31,5 @@
         > ID #XXX
         > Nom du Pokemon
         > ... TOUTES LES INFOS DU POKEMON
+
+------------------------------
