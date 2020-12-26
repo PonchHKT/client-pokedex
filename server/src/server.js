@@ -1,21 +1,14 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express')
+const cors = require('cors')
+/* API Routes */
+const pokemons = require('./routes/pokemon')
 
-const route = require('./routes/pokemon');
+const app = express()
+app.use(cors())
 
-const app = express();
-const args = process.argv.slice(2);
+app.use('/api', pokemons)
 
-const Port = args[0];
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); 
-
-
-app.use("/", route);
-
-app.listen(Port, function() {
-  console.log(
-    `Server is listening on http://localhost:${Port}`
-  );
-});
+const PORT = process.env.PORT || 4000
+app.listen(PORT, () => {
+  console.log(`Server ready at http://localhost:${PORT}`)
+})

@@ -1,34 +1,25 @@
 const express = require("express");
-const fs = require('fs');
+const pokedex = require('../data/pokedex.json');
 
 const router = express.Router();
 
-const pokedex = fs.readFileSync('data/pokedex.json');
-const itemList = JSON.parse(pokedex);
+router.get('/pokemons', (req, res) => {
 
-
-router.get('/api/:language/pokemons', (req, res) => {
-  if (!itemList) {
-      return res.status(400).send("Sorry Pokemons not found")
-  }
-  res.json(itemList);
+  res.json(pokedex);
 })
 
 
-
-router.get('/api/:language/pokemons/info', (req, res) => {
-  if (!itemList[req.query.id - 1]) {
-
-    const langage = req.params.language;
+router.get('/pokemons/info', (req, res) => {
+  if (!pokedex[req.query.id - 1]) {
 
     const pokename = req.query.name;
-    const pokeverif =  itemList.find(c => c.name[langage] === pokename);
+    const pokeverif =  pokedex.find(c => c.name.english === pokename);
 
     if (pokeverif === undefined) {
       
       const poketype = req.query.type;
 
-      const pokeverif =  itemList.find(c => c.type === poketype);
+      const pokeverif =  pokedex.find(c => c.type === poketype);
 
       if (pokeverif === undefined) {
 
@@ -43,15 +34,15 @@ router.get('/api/:language/pokemons/info', (req, res) => {
 
       }
 
-      return res.json(itemList.find(c => c.type == poketype));
+      return res.json(pokedex.find(c => c.type == poketype));
 
     };
 
-    return res.json(itemList.find(c => c.name[langage] === pokename));
+    return res.json(pokedex.find(c => c.name.english === pokename));
 
   }
 
-  return res.json(itemList[req.query.id - 1]);
+  return res.json(pokedex[req.query.id - 1]);
 })
 
 
