@@ -8,7 +8,7 @@ router.get('/pokemons', (req, res) => {
   res.json(pokedex);
 })
 
-
+/*
 router.get('/pokemons/info', (req, res) => {
   if (!pokedex[req.query.id - 1]) {
 
@@ -23,13 +23,12 @@ router.get('/pokemons/info', (req, res) => {
 
       if (pokeverif === undefined) {
 
-        // A MODIFIER //
 
-        /*const poketype = req.query.type;
+        const poketype = req.query.type;
         console.log(poketype)
         
         const pokeverif =  itemList.includes(poketype, type)
-        console.log(pokeverif)*/
+        console.log(pokeverif)
         return res.status(400).send("Sorry the specific Pokemon not found");
 
       }
@@ -44,7 +43,7 @@ router.get('/pokemons/info', (req, res) => {
 
   return res.json(pokedex[req.query.id - 1]);
 })
-
+*/
 
 
 module.exports = router;

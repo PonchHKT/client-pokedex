@@ -20,7 +20,11 @@ class Pokedex extends Component {
     return (
       <div className="pokedex">
         {this.state.pokemons.map((pokemon) => (
-          <PokemonCard key={pokemon.id} name={pokemon.name.french} />
+          <PokemonCard
+            id={pokemon.numéro}
+            ndex={pokemon.ndex}
+            name={pokemon.nom}
+          />
         ))}
       </div>
     );
