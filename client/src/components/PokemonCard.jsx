@@ -4,10 +4,11 @@ class PokemonCard extends Component {
   render() {
 
     const url = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${this.props.ndex}.png`;
+    const pokeurl = `./pokemon.html?id=${this.props.id}`;
 
     return (
       <button className="pokemon-card">
-        <a href="./pokemon.html">
+        <a href={pokeurl}>
           <div>
             <img src={url} alt="img-pokemon" />
             <h1> #{this.props.id} </h1>

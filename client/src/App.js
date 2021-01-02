@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import "./styles.css";
-import Pokedex from "./components/Pokedex";
+import "./App.css";
 
 class App extends Component {
   render() {
-    return <Pokedex />;
+    return <h1>TEST</h1>;
   }
 }
 

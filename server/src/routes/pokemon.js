@@ -4,8 +4,19 @@ const pokedex = require('../data/pokedex.json');
 const router = express.Router();
 
 router.get('/pokemons', (req, res) => {
-
+  if (!pokedex) {
+    return res.status(400).send("Sorry Pokemons not found")
+  }
   res.json(pokedex);
+})
+
+router.get('/pokemons/:id', (req, res) => {
+  const pokeid = req.params.id;
+
+  if (!pokedex[pokeid - 1]) {
+    return res.status(400).send("Sorry Pokemons not found")
+  }
+  res.json(pokedex[pokeid - 1]);
 })
 
 /*
