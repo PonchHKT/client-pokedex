@@ -22,11 +22,15 @@ class PokemonI extends Component {
 
     const pokeurl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${poke.ndex}.png`;
 
+    if (poke.type2) {
+
+    }
+
     return (
       <div className="p-card">
         <div className="p-header">
           <button>
-            <a href="/">←</a>
+            <a href="../">←</a>
           </button>
           <div>
             <h1>#{poke.numéro}</h1>
@@ -64,7 +68,36 @@ class PokemonI extends Component {
                   {poke.espece}
                 </td>
               </tr>
+
+              <tr>
+                <td>
+                  Type 1 :
+                </td>
+                <td>
+                  {poke.type1}
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  Type 2 :
+                </td>
+                <td>
+                  {poke.type2}
+                </td>
+              </tr>
               
+
+              <tr>
+                <td>
+                  Taille :
+                </td>
+                <td>
+                  {poke.taille}
+                </td>
+              </tr>
+
             </tbody>
 
           </table>
