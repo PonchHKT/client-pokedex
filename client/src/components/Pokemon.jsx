@@ -11,7 +11,7 @@ class PokemonI extends Component {
     const { id } = this.props.match.params;
 
     const response = await fetch(`http://localhost:4000/api/pokemons/${id}`);
-    const pokemons = await response.json();
+    const pokemons = await response.json(); 
 
     this.setState({ pokemons });
   }
@@ -22,9 +22,18 @@ class PokemonI extends Component {
 
     const pokeurl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${poke.ndex}.png`;
 
-    if (poke.type2) {
-
-    }
+    let type2verif;
+    if(poke.type2) {
+      type2verif = (
+        <tr>
+          <td>
+            Type 2 : 
+          </td>
+          <td>
+            {poke.type2}
+          </td>
+        </tr>)
+    } 
 
     return (
       <div className="p-card">
@@ -78,17 +87,8 @@ class PokemonI extends Component {
                 </td>
               </tr>
 
-
-              <tr>
-                <td>
-                  Type 2 :
-                </td>
-                <td>
-                  {poke.type2}
-                </td>
-              </tr>
-              
-
+              {type2verif}
+            
               <tr>
                 <td>
                   Taille :
@@ -97,6 +97,24 @@ class PokemonI extends Component {
                   {poke.taille}
                 </td>
               </tr>
+
+              <tr>
+                <td>
+                  Poids :
+                </td>
+                <td>
+                  {poke.poids}
+                </td>
+              </tr> 
+
+              <tr>
+                <td>
+                  Forme :
+                </td>
+                <td>
+                  {poke.forme}
+                </td>
+              </tr> 
 
             </tbody>
 
