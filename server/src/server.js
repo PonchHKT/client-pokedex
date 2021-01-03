@@ -4,7 +4,7 @@ const cors = require('cors')
 const pokemons = require('./routes/pokemon')
 
 const app = express()
-app.use(cors())
+app.use(cors()) 
 
 app.use('/api', pokemons)
 
