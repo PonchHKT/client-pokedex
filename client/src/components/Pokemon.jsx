@@ -27,12 +27,10 @@ class PokemonI extends Component {
 
     const pokeurl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${poke.ndex}.png`;
 
-    const attacks = [poke.attaques];
 
-    console.log(poke);
-    console.log(poke.attaques);
-    console.log(attacks);
-
+    if (!this.state.pokemons.attaques) {
+      return <div>Loading ....</div>
+    }
     
     let type2verif;
     if(poke.type2) {
@@ -69,6 +67,9 @@ class PokemonI extends Component {
                 </th>
               </tr>
             </thead>
+
+            <div className="separator"></div>
+
 
             <div className="p-identite2">
             <tbody className="tbody1">
@@ -196,28 +197,30 @@ class PokemonI extends Component {
           </div>
 
           <div className="p-attack">
-          <table>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    Attaques
+                  </th>
+                </tr>
+              </thead>
 
-            <thead>
-              <tr>
-                <th>
-                  Attaques
-                </th>
-              </tr>
-            </thead>
+              <div className="separator"></div>
 
-            <tbody>
 
-              {attacks.map((attack, index) => (
+              {this.state.pokemons.attaques.map((attack, index) => (
                 <PokemonAttack
-                  key={attack}
-                  lvl={attack}
+                  key={attack.index}
+                  lvl={attack.niveau}
+                  nom={attack.nom}
+                  power={attack.puissance}
+                  prec={attack.precision}
+                  pp={attack.pp}
                 />
               ))}
 
-            </tbody>
-
-          </table>
+            </table>
         </div>
       </div>
     );

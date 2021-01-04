@@ -5,14 +5,56 @@ class PokemonAttack extends Component {
   render() {
 
     return (
-        <tr>
+        <div className="attackcard">
+          <tr>
             <td>
-            Niveau :
+              Niveau :
             </td>
             <td>
-              {this.props.niveau}
+              {this.props.lvl}
             </td>
-        </tr>
+          </tr>
+
+
+          <tr>
+            <td>
+              Nom :
+            </td>
+            <td>
+              {this.props.nom}
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              Puissance :
+            </td>
+            <td>
+              {this.props.power}
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              Précision :
+            </td>
+            <td>
+              {this.props.prec}
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              PP :
+            </td>
+            <td>
+              {this.props.pp}
+            </td>
+          </tr>
+        </div>
     );
   }
 }

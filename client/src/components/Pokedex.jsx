@@ -17,6 +17,11 @@ class Pokedex extends Component {
   }
 
   render() {
+
+    if (!this.state.pokemons.length) {
+      return <div> loading ... </div>
+    }
+
     return (
       <div>
         <h2>
