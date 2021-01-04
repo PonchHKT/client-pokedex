@@ -109,6 +109,12 @@ a {
   font-size: 50px;
   color: rgb(236, 0, 177);
   margin-top: 20px;
+  transition-duration: 1s;
+}
+
+.Page2Bouton:hover {
+  color: rgb(197, 2, 148);
+  transform: scale(1.06);
 }
 
 .p-title {
@@ -134,21 +140,39 @@ thead, tbody {
   text-align: left;
 }
 
-thead {
-  font-size: 2em;
-}
-
 thead th{
-  border-bottom: white 1px solid;
+  position: relative;
+  font-size: 2em;
+  border-bottom: white 3px solid;
 }
 
 tbody {
-  margin: 0 1em 0 1em;
+  margin-top: 0.7em;
   font-size: 1.3em;
 }
 
+.tbody1 {
+  margin-right: 2em;
+}
+
+tbody tr:nth-of-type(odd) {
+  display: block;
+  background: #85838380;
+  backdrop-filter: blur(6px);  
+} 
+
+tbody tr:nth-of-type(even) {
+  display: block;
+  background-color: #1f1f1fc5;
+  backdrop-filter: blur(6px);
+} 
+
+
 td {
   padding-right: 5em;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 

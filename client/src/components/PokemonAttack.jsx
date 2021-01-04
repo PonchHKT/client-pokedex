@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class PokemonAttack extends Component {
+  
   render() {
 
     return (
@@ -9,6 +10,7 @@ class PokemonAttack extends Component {
             Niveau :
             </td>
             <td>
+              {this.props.niveau}
             </td>
         </tr>
     );

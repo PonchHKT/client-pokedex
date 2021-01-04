@@ -7,6 +7,7 @@ class PokemonI extends Component {
     super(props);
 
     this.state = { pokemons: [] };
+    
   }
 
   async componentDidMount() {
@@ -18,14 +19,20 @@ class PokemonI extends Component {
     this.setState({ pokemons });
   }
 
+
+
   render() {
 
     const poke = this.state.pokemons;
 
     const pokeurl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${poke.ndex}.png`;
 
-    console.log(this.state.pokemons);
-    
+    const attacks = [poke.attaques];
+
+    console.log(poke);
+    console.log(poke.attaques);
+    console.log(attacks);
+
     
     let type2verif;
     if(poke.type2) {
@@ -64,7 +71,7 @@ class PokemonI extends Component {
             </thead>
 
             <div className="p-identite2">
-            <tbody>
+            <tbody className="tbody1">
 
               <tr>
                 <td>
@@ -100,7 +107,7 @@ class PokemonI extends Component {
                   Taille :
                 </td>
                 <td>
-                  {poke.taille}
+                  {poke.taille}m
                 </td>
               </tr>
 
@@ -109,7 +116,7 @@ class PokemonI extends Component {
                   Poids :
                 </td>
                 <td>
-                  {poke.poids}
+                  {poke.poids}kg
                 </td>
               </tr> 
 
@@ -201,7 +208,12 @@ class PokemonI extends Component {
 
             <tbody>
 
-              
+              {attacks.map((attack, index) => (
+                <PokemonAttack
+                  key={attack}
+                  lvl={attack}
+                />
+              ))}
 
             </tbody>
 
