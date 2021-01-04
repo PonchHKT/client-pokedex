@@ -70,15 +70,87 @@ body {
   color: rgb(236, 0, 177);
 }
 
-
-
 a {
   text-decoration: none;
 }
 
-h1 {
-  font-family: "Helvetica Neue", cursive;
+.p-card {
+  color: white;
 }
+
+.p-card {
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 4em;
+  padding-top: 1em;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px 0px rgb(236, 0, 177);
+  width: 17em;
+  background-color: #1f1f1fc5;
+  display: inline;
+  backdrop-filter: blur(6px);
+}
+
+.p-header {
+  display: flex;
+  place-content: center;
+}
+
+.p-header button {
+  background-color: Transparent;
+  border: none;
+  position: relative;
+  left: -10em;
+}
+
+.Page2Bouton {
+  font-size: 50px;
+  color: rgb(236, 0, 177);
+  margin-top: 20px;
+}
+
+.p-title {
+  display: flex;
+  align-items: center;
+}
+
+.p-title h1 {
+  font-size: 3em;
+  margin: 0.5em;
+}
+
+
+.p-identite  {
+  text-align: -webkit-center;
+}
+
+.p-identite2 {
+  display: flex;
+}
+
+thead, tbody {
+  text-align: left;
+}
+
+thead {
+  font-size: 2em;
+}
+
+thead th{
+  border-bottom: white 1px solid;
+}
+
+tbody {
+  margin: 0 1em 0 1em;
+  font-size: 1.3em;
+}
+
+td {
+  padding-right: 5em;
+}
+
 
 @media screen and (max-width: 850px) {
   .pokedex {
