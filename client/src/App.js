@@ -19,15 +19,6 @@ class App extends Component {
             <Route path="/pokemon/:id" component={PokemonI}>
             </Route>
             <Route path="/">
-            <h2>
-            <span>P</span>
-            <span>O</span>
-            <span>K</span>
-            <span>E</span>
-            <span>D</span>
-            <span>E</span>
-            <span>X</span>
-            </h2>
               <Pokedex />
             </Route>
           </Switch>

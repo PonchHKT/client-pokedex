@@ -12,8 +12,6 @@ h2 {
 
 h2 span {
     display: table-cell;
-    margin: 0;
-    padding: 0;
     animation: animate 2s linear infinite;
 }
 
@@ -70,5 +68,23 @@ h2 span:nth-child(8) {
         color: rgb(177, 0, 177);
         filter: blur(0px);
         text-shadow: 0 0 10px none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h2 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    h2 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    h2 {
+        font-size: 2em;
     }
 }
