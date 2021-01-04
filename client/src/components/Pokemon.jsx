@@ -37,15 +37,17 @@ class PokemonI extends Component {
 
     return (
       <div className="p-card">
-        <div className="p-header">
-          <button>
-            <a href="../">←</a>
-          </button>
-          <div>
+      <div className="p-header">
+        <div className="p-list">
             <h1>#{poke.numéro}</h1>
             <h1>{poke.nom}</h1>
             <img src={pokeurl} alt="Pokemon"/>
           </div>
+        </div>
+        <div className="RIEN">
+        <button>
+        <a href="../" className="back"></a>
+        </button>
         </div>
         <div className="p-identite">
           <table>
@@ -57,7 +59,6 @@ class PokemonI extends Component {
                 </th>
               </tr>
             </thead>
-
             <tbody>
 
               <tr>
