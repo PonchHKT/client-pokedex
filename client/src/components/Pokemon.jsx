@@ -52,7 +52,6 @@ class PokemonI extends Component {
             <img src={pokeurl} alt="Pokemon"/>
           </div>
         </div>
-
         <div className="p-identite">
           <table>
 
