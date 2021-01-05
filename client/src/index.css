@@ -5,7 +5,6 @@
   }
 
 h2 {
-    margin-top: 100px;
     margin-bottom: 35px;
     align-items: center;
     text-align: center;
@@ -17,6 +16,7 @@ h2 {
 h2 span {
     display: table-cell;
     animation: animate 7s linear infinite;
+    line-height: 2em;
 }
 
 h2 span:nth-child(1) {
@@ -58,7 +58,6 @@ h2 span:nth-child(8) {
 }
   
 .searchbar {
-    padding-top: 2em;
     text-align: center;
     padding-bottom: 3em;
 }
@@ -102,7 +101,7 @@ h2 span:nth-child(8) {
 }
   
 .pokemon-card a:visited {
-    color: #999999;
+    color: #810799;
 }
   
 .pokemon-card a:hover {
@@ -126,7 +125,7 @@ a {
 
     0%,
     100% {
-        color:  hsl(59, 100%, 50%);
+        color:  hsl(310, 97%, 62%);
         filter: blur(2px);
         text-shadow: 0 0 10px #00b3ff,
             0 0 20px #00b3ff,
@@ -140,7 +139,7 @@ a {
 
     5%,
     95% {
-        color: rgb(248, 152, 26);
+        color: rgb(236, 0, 177);
 
         filter: blur(0px);
         text-shadow: 0 0 10px none;
