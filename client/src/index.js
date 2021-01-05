@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 import "./pokeinfo.css";
+import "./loader.css";
+
 
 import App from "./App";
 

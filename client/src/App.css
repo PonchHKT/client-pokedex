@@ -45,4 +45,5 @@ body {
   position: fixed;
   top: -6em;
   right: 0;
+  z-index: 2;
 }

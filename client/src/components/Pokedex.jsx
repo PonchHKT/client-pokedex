@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import Loader from "./Loader";
 
 import PokemonCard from "./PokemonCard";
+
+import Img from '../images/pokeball.png';
+
 
 class Pokedex extends Component {
   constructor(props) {
@@ -27,7 +29,13 @@ class Pokedex extends Component {
   render() {
 
     if (!this.state.pokemons.length) {
-      return <div> loading ... </div>
+      return <div className=".loader">
+                <div className="l-back">
+                    <div className="l-img"></div>
+                    <img src={Img} alt="pokeball" className="pokeballimg"/>
+
+                </div>
+            </div>
     }
     
 
@@ -39,8 +47,6 @@ class Pokedex extends Component {
 
     return (
       <div>
-              <Loader />
-
         <h2>
           <span>P</span>
           <span>O</span>

@@ -2,6 +2,9 @@ import React, { Component } from "react";
 
 import PokemonAttack from "./PokemonAttack";
 
+import Img from '../images/pokeball.png';
+
+
 class PokemonI extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +32,13 @@ class PokemonI extends Component {
 
 
     if (!this.state.pokemons.attaques) {
-      return <div>Loading ....</div>
+      return <div className=".loader">
+                <div className="l-back">
+                    <div className="l-img"></div>
+                    <img src={Img} alt="pokeball" className="pokeballimg"/>
+
+                </div>
+            </div>
     }
     
     let type2verif;
