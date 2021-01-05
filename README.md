@@ -19,8 +19,6 @@
 
 > This is a pokedex with react ;)
 
-### 🏠 [Homepage](https://github.com/kefranabg/readme-md-generator#readme)
-
 ### ✨ [Demo](e)
 
 ## Prerequisites
