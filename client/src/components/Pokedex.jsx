@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loader from "./Loader";
 
 import PokemonCard from "./PokemonCard";
 
@@ -38,6 +39,8 @@ class Pokedex extends Component {
 
     return (
       <div>
+              <Loader />
+
         <h2>
           <span>P</span>
           <span>O</span>

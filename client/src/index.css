@@ -150,11 +150,21 @@ a {
     h2 {
         font-size: 5em;
     }
+    .searchbar input {
+        padding: 5px 5em 5px 1em;
+    }
 }
 
 @media screen and (max-width: 570px) {
     h2 {
         font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .searchbar input {
+        padding: 5px 2em 5px 1em;
+        font-size: 1em;
     }
 }
 

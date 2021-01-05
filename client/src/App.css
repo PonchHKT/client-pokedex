@@ -40,3 +40,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #0432af;
 }
+
+.music {
+  position: fixed;
+  top: -6em;
+  right: 0;
+}
