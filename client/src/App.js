@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <Router>
                 <embed className="music" src="https://www.cjoint.com/doc/18_09/HIkpnJ4y0Fw_generique-francais-de-la-saison-1-de-pokemon.mp3" autostart="true" loop="false" hidden="true"></embed>
+                
 
         <div>
           <Switch>
