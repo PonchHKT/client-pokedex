@@ -60,185 +60,89 @@ class PokemonI extends Component {
 
     return (
       <div className="p-card">
-        <div className="p-header">
-          <button>
-            <a href="../" className="Page2Bouton"><div className="buttonimg"></div></a>
-          </button>
-          <div>
-            <div className="text">
-              <h1>#{poke.numéro}</h1>
-              <h1>{poke.nom}</h1>
-            </div>
+      <div className="p-header">
+        <div className="p-list">
+            <h1>#{poke.numéro}</h1>
+            <h1>{poke.nom}</h1>
             <img src={pokeurl} alt="Pokemon"/>
           </div>
         </div>
-
-        <div className="p-identite">
-
-          <div className="p-title">
-            <h1>
-              Identité
-            </h1>
-            <div className="line"></div>
-          </div>
-
-          <div className="p-center">
-            <table>
-
-              <div className="p-identite2">
-                <div className="p-idbody">
-                  <tbody className="tbody1">
-
-                    <tr>
-                      <td>
-                        Couleur
-                      </td>
-                      <td>
-                        {poke.couleur}
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        Espece
-                      </td>
-                      <td>
-                        {poke.espece}
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        Type 1
-                      </td>
-                      <td>
-                        {poke.type1}
-                      </td>
-                    </tr>
-
-                    {type2verif}
-                  
-                    <tr>
-                      <td>
-                        Taille
-                      </td>
-                      <td>
-                        {poke.taille}m
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        Poids
-                      </td>
-                      <td>
-                        {poke.poids}kg
-                      </td>
-                    </tr> 
-
-                    <tr>
-                      <td>
-                        Forme
-                      </td>
-                      <td>
-                        {poke.forme}
-                      </td>
-                    </tr> 
-
-                  </tbody>
-                </div>
-
-
-                <tbody className="tbody2">
-
-                  <tr>
-                    <td>
-                      Pokemon
-                    </td>
-                    <td>
-                      {poke.nom}
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      Nom FR
-                    </td>
-                    <td>
-                      {poke.nom}
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      Nom EN
-                    </td>
-                    <td>
-                      {poke.nomen}
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td>
-                      Nom DE
-                    </td>
-                    <td>
-                      {poke.nomde}
-                    </td>
-                  </tr>
-
-                  {nomromajiverif}
-
-                  <tr>
-                    <td>
-                      Nom TM
-                    </td>
-                    <td>
-                      {poke.nomtm}
-                    </td>
-                  </tr> 
-
-                  <tr>
-                    <td>
-                      Nom JA
-                    </td>
-                    <td>
-                      {poke.nomja}
-                    </td>
-                  </tr> 
-
-                </tbody>
-              </div>
-
-            </table>
-          </div>
+        <div className="RIEN">
+        <button>
+        <a href="../" className="back"></a>
+        </button>
         </div>
+        <div className="p-identite">
+          <table>
 
-          <div className="p-attack">
+            <thead>
+              <tr>
+                <th>
+                  IDENTITE
+                </th>
+              </tr>
+            </thead>
+            <tbody>
 
-            <div className="separator"></div>
-           
-            <div className="p-title">
-              <h1>
-                Attaques
-              </h1>
-              <div className="line"></div>
-            </div>
+              <tr>
+                <td>
+                  Couleur :
+                </td>
+                <td>
+                  {poke.couleur}
+                </td>
+              </tr>
 
-              <table>
+              <tr>
+                <td>
+                  Espece :
+                </td>
+                <td>
+                  {poke.espece}
+                </td>
+              </tr>
 
-              {this.state.pokemons.attaques.map((attack, index) => (
-                <PokemonAttack
-                  key={attack.index}
-                  lvl={attack.niveau}
-                  nom={attack.nom}
-                  power={attack.puissance}
-                  prec={attack.precision}
-                  pp={attack.pp}
-                />
-              ))}
+              <tr>
+                <td>
+                  Type 1 :
+                </td>
+                <td>
+                  {poke.type1}
+                </td>
+              </tr>
 
-            </table>
+              {type2verif}
+            
+              <tr>
+                <td>
+                  Taille :
+                </td>
+                <td>
+                  {poke.taille}
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Poids :
+                </td>
+                <td>
+                  {poke.poids}
+                </td>
+              </tr> 
+
+              <tr>
+                <td>
+                  Forme :
+                </td>
+                <td>
+                  {poke.forme}
+                </td>
+              </tr> 
+
+            </tbody>
+
+          </table>
         </div>
       </div>
     );
