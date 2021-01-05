@@ -14,11 +14,10 @@
 }
 
 body {
-  background: url(https://www.wallpapertip.com/wmimgs/3-33641_pokemon-desktop-background.jpg) no-repeat center fixed;
+  background: url(https://www.wallpapertip.com/wmimgs/3-33641_pokemon-desktop-background.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
 }
 

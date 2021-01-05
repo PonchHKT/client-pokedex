@@ -6,7 +6,10 @@ class Pokedex extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { pokemons: [] };
+    this.state = { 
+      pokemons: [],
+      searchString: ''
+    };
   }
 
   async componentDidMount() {
@@ -16,7 +19,16 @@ class Pokedex extends Component {
     this.setState({ pokemons });
   }
 
+  handleSearch = event => {
+    this.setState({ searchString: event.target.value })
+  }
+
   render() {
+
+    if (!this.state.pokemons.length) {
+      return <div> loading ... </div>
+    }
+
     return (
       <div>
         <h2>
@@ -28,9 +40,17 @@ class Pokedex extends Component {
           <span>E</span>
           <span>X</span>
         </h2>
+
+        <div>
+          <div>
+            <input onChange={this.handleSearch} value={this.state.searchString} type="text" placeholder="search" />
+          </div>
+        </div>
+
         <div className="pokedex">
           {this.state.pokemons.map((pokemon) => (
             <PokemonCard
+              key={pokemon.numéro}
               id={pokemon.numéro}
               ndex={pokemon.ndex}
               name={pokemon.nom}

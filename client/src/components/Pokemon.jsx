@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
+import PokemonAttack from "./PokemonAttack";
+
 class PokemonI extends Component {
   constructor(props) {
     super(props);
 
     this.state = { pokemons: [] };
+    
   }
 
   async componentDidMount() {
@@ -16,24 +19,44 @@ class PokemonI extends Component {
     this.setState({ pokemons });
   }
 
+
+
   render() {
 
     const poke = this.state.pokemons;
 
     const pokeurl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${poke.ndex}.png`;
 
+
+    if (!this.state.pokemons.attaques) {
+      return <div>Loading ....</div>
+    }
+    
     let type2verif;
     if(poke.type2) {
       type2verif = (
         <tr>
           <td>
-            Type 2 : 
+            Type 2
           </td>
           <td>
             {poke.type2}
           </td>
         </tr>)
-    } 
+    }
+
+    let nomromajiverif;
+    if (poke.nomromaji) {
+      nomromajiverif = (
+        <tr>
+          <td>
+            Nom ROMAJI
+          </td>
+          <td>
+            {poke.nomromaji}
+          </td>
+        </tr>)
+    }
 
     return (
       <div className="p-card">

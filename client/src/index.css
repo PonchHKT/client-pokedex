@@ -51,6 +51,51 @@ h2 span:nth-child(8) {
     animation-delay: 7s;
 }
 
+.pokedex {
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+  
+.pokemon-card {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 4em;
+    padding-top: 1em;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px rgb(236, 0, 177);
+    width: 17em;
+    background-color: #1f1f1fc5;
+    display: inline;
+    backdrop-filter: blur(6px);
+}
+  
+.pokemon-card a:link {
+    color: hsl(202, 63%, 57%);
+}
+  
+.pokemon-card a:visited {
+    color: #999999;
+}
+  
+.pokemon-card a:hover {
+    color: rgb(236, 0, 177);
+}
+  
+a {
+    text-decoration: none;
+}
+
+.pokemon-card {
+   transition-duration: 1s; 
+}
+
+.pokemon-card:hover {
+    transform: scale(1.06, 1.06);
+}
+
 @keyframes animate {
 
     0%,
@@ -91,5 +136,32 @@ h2 span:nth-child(8) {
 @media screen and (max-width: 350px) {
     h2 {
         font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .pokedex {
+      margin-left: 0;
+      margin-right: 0;
+    }
+}
+  
+@media screen and (max-width: 550px) {
+    .pokemon-card {
+      width: 13em;
+    }
+  
+    .pokemon-card img {
+      width: 50%;
+    }
+}
+  
+@media screen and (max-width: 390px) {
+    .pokemon-card {
+      width: 10em;
+}
+  
+    .pokemon-card h1 {
+      font-size: 1.5em;
     }
 }
