@@ -1,0 +1,245 @@
+.p-card {
+    padding-right: 13em;
+    padding-left: 13em;
+}
+
+.p-card {
+    color: white;
+}
+  
+.p-header {
+    display: flex;
+    place-content: center;
+}
+  
+.p-header button {
+    background-color: Transparent;
+    border: none;
+    position: fixed;
+    left: 1em;
+    top: 1em;
+}
+  
+.Page2Bouton {
+    font-size: 50px;
+    background-image: url(./images/back.png);
+    margin-top: 20px;
+    transition-duration: 1s;
+    font-display: none;
+}
+  
+.Page2Bouton:hover {
+    color: rgb(197, 2, 148);
+}
+
+.buttonimg {
+    background: url(./images/back.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 1.2em;
+    transition: 1s;
+}
+
+.buttonimg:hover{
+    transform: scale(1.06, 1.06);
+}
+  
+.p-header div {
+    display: flex;
+    align-items: center;
+}
+  
+.p-header h1 {
+    font-size: 3em;
+    margin: 0.5em;
+}
+
+.p-title {
+    padding-bottom: 2em;
+}
+
+.line {
+    max-width: 100%;
+    border: solid;
+    color: white;
+}
+
+.p-center {
+    text-align: -webkit-center;
+}
+
+table {
+    text-align: center;
+}
+
+.p-identite2 {
+    display: flex;
+}
+  
+thead {
+    padding-bottom: 0.7em;
+}
+  
+thead, tbody {
+    text-align: left;
+}
+  
+thead th{
+    position: relative;
+    font-size: 2em;
+    border-bottom: white 3px solid;
+}
+  
+tbody {
+    font-size: 1.3em;
+}
+  
+.tbody1 {
+    margin-right: 2em;
+}
+
+.tbody2 {
+    margin-left: 2em;
+}
+  
+tbody tr:nth-of-type(odd) {
+    display: block;
+    background: #85838380;
+    backdrop-filter: blur(6px);  
+} 
+  
+tbody tr:nth-of-type(even) {
+    display: block;
+    background-color: #1f1f1fc5;
+    backdrop-filter: blur(6px);
+} 
+  
+  
+td {
+    padding-right: 5em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 5em;
+    height: 2em;  
+}
+
+.separator {
+    padding-top: 5em;
+}
+  
+.attackcard {
+    font-size: 1.3em;
+    margin-bottom: 4em;
+    width: 13em;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    display: inline-grid;
+    backdrop-filter: blur(6px);
+}
+  
+.attackcard td {
+    padding-right: 1em;
+}
+  
+.attackcard tr:nth-of-type(odd) {
+    display: block;
+    background: #85838380;
+    backdrop-filter: blur(6px);  
+} 
+  
+.attackcard tr:nth-of-type(even) {
+    display: block;
+    background-color: #1f1f1fc5;
+    backdrop-filter: blur(6px);
+}
+
+@media screen and (max-width: 1400px) {
+    thead th {
+      font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .p-card {
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    td {
+        padding-right: 2em;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .tbody1 {
+        margin-right: 0.5em;
+    }
+    .tbody2 {
+        margin-left: 0.5em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .p-identite {
+        text-align: -webkit-center;
+    }
+
+    .p-title {
+        text-align: left;
+    }
+
+    .p-identite2 {
+        display: block;
+    }
+
+    .p-idbody {
+        margin-bottom: 4em;
+    }
+
+    td {
+        padding-right: 5em;
+    }
+}
+
+
+@media screen and (max-width: 660px) {
+    .p-header {
+        text-align: center;
+    }
+
+    .p-header div {
+        display: block;
+    }
+
+    .text {
+        display: flex;
+    }
+
+    td {
+        padding-right: 3em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .p-card {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    .p-header h1 {
+        margin-right: 0.2em;
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    td {
+        padding-right: 1.5em;
+    }
+}

@@ -8,7 +8,7 @@ class PokemonAttack extends Component {
         <div className="attackcard">
           <tr>
             <td>
-              Niveau :
+              Niveau
             </td>
             <td>
               {this.props.lvl}
@@ -18,7 +18,7 @@ class PokemonAttack extends Component {
 
           <tr>
             <td>
-              Nom :
+              Nom
             </td>
             <td>
               {this.props.nom}
@@ -28,7 +28,7 @@ class PokemonAttack extends Component {
 
           <tr>
             <td>
-              Puissance :
+              Puissance
             </td>
             <td>
               {this.props.power}
@@ -38,7 +38,7 @@ class PokemonAttack extends Component {
 
           <tr>
             <td>
-              Précision :
+              Précision
             </td>
             <td>
               {this.props.prec}
@@ -48,7 +48,7 @@ class PokemonAttack extends Component {
 
           <tr>
             <td>
-              PP :
+              PP
             </td>
             <td>
               {this.props.pp}
