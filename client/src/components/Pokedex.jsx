@@ -8,7 +8,7 @@ class Pokedex extends Component {
 
     this.state = { 
       pokemons: [],
-      searchString: ''
+      search: ''
     };
   }
 
@@ -19,8 +19,8 @@ class Pokedex extends Component {
     this.setState({ pokemons });
   }
 
-  handleSearch = event => {
-    this.setState({ searchString: event.target.value })
+  updateSearch(event) {
+    this.setState({search: event.target.value.substr(0, 20)});
   }
 
   render() {
@@ -28,6 +28,13 @@ class Pokedex extends Component {
     if (!this.state.pokemons.length) {
       return <div> loading ... </div>
     }
+    
+
+    let filteredPokemons = this.state.pokemons.filter(
+      (pokemon) => {
+        return pokemon.nom.toLowerCase().indexOf(this.state.search.toLocaleLowerCase()) !== -1;
+      }
+    );
 
     return (
       <div>
@@ -41,14 +48,15 @@ class Pokedex extends Component {
           <span>X</span>
         </h2>
 
-        <div>
-          <div>
-            <input onChange={this.handleSearch} value={this.state.searchString} type="text" placeholder="search" />
-          </div>
+        <div className="searchbar">
+          <input type="text" 
+            value={this.state.search} 
+            onChange={this.updateSearch.bind(this)}
+          />
         </div>
 
         <div className="pokedex">
-          {this.state.pokemons.map((pokemon) => (
+          {filteredPokemons.map((pokemon) => (
             <PokemonCard
               key={pokemon.numéro}
               id={pokemon.numéro}

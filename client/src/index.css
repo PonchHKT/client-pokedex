@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 h2 {
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 35px;
     align-items: center;
     text-align: center;
@@ -53,6 +53,31 @@ h2 span:nth-child(8) {
     margin-left: 5%;
 }
   
+.searchbar {
+    padding-top: 2em;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.searchbar input {
+    background-color: rgba(0, 0, 0, 0.329);
+    backdrop-filter: blur(6px);
+	font-size: 1.5em;
+	color: white;
+	padding: 10px 10em 10px 1em;
+    height: 50px;
+    border: none;
+    border-bottom: 3px solid white;
+    border-radius: 0.2em;
+    outline: none;
+    transition-duration: 1s;
+}
+
+.searchbar input:hover {
+    transform: scale(1.04);
+    border-bottom: 3px solid blueviolet;
+}
+
 .pokemon-card {
     text-align: center;
     text-decoration: none;
@@ -86,6 +111,7 @@ a {
 
 .pokemon-card {
    transition-duration: 1s; 
+   padding-bottom: 1em;
 }
 
 .pokemon-card:hover {
