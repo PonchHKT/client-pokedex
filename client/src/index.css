@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @font-face {
     font-family:"pokemon";
     src: url("fonts/pokemon/Pokemon\ Hollow.ttf")
-  }
+}
+
+@font-face {
+    font-family:"pokemons";
+    src: url("fonts/pokemon/Pokemon\ Solid.ttf")
+}
 
 h2 {
     margin-bottom: 35px;
@@ -63,7 +67,7 @@ h2 span:nth-child(8) {
 }
 
 .searchbar input {
-    background-color: rgba(0, 0, 0, 0.329);
+    background-color: rgba(0, 0, 0, 0.377);
     backdrop-filter: blur(6px);
 	font-size: 1.5em;
 	color: white;
@@ -79,6 +83,25 @@ h2 span:nth-child(8) {
 .searchbar input:hover {
     transform: scale(1.04);
     border-bottom: 3px solid blueviolet;
+}
+
+
+.error h1 {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.error span {
+    background-color: rgba(7, 7, 7, 0.726);
+    border: solid 2px blueviolet;
+    padding: 1em;
+    border-radius: 4px;
+    color: red;
+    font-family: pokemon;
+}
+
+.error strong {
+    color: blueviolet;
 }
 
 .pokemon-card {

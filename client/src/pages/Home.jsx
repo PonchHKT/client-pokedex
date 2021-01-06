@@ -61,7 +61,7 @@ class Home extends Component {
           this.state.pokemons.filter(v => {
               const searchValues = [
                   v.nom, v.nomen, v.nomde, v.nomja, v.nomch, v.nomko, v.nomromanji, v.nomtm,
-                  v.espece, v.ndex, v.pokemon, v.type1, v.type2
+                  v.espece, v.ndex, v.pokemon, v.type1, v.type2, v.couleur
               ].map(v => v ? v.toLowerCase() : '')
               return searchValues.join(' ').indexOf(searchValue) !== -1
           })
@@ -85,8 +85,8 @@ class Home extends Component {
     const pokemonsFiltered = this.getFilteredPokemons(search)
     if (pokemonsFiltered.length === 0) {
         if (search.length > 0)
-            return this.renderErrorMsg(<span>No search result with <strong>{search}</strong></span>)
-        return this.renderErrorMsg(<span>There isn't any pokemon in database</span>)
+            return this.renderErrorMsg(<span>Aucun résultat avec <strong>{search}</strong></span>)
+        return this.renderErrorMsg(<span>Il n'y a aucun pokémon dans la base de donnée</span>)
     }
     return <Pokedex pokemons={pokemonsFiltered} />
 }
@@ -115,7 +115,7 @@ class Home extends Component {
         <SearchBar onSearch={this.onSearch} />
         </div>
         
-        <div>
+        <div className="error">
             {this.renderBody(this.state)}
         </div>
       </div>
