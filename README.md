@@ -58,7 +58,7 @@ npm test
 
 * Website: https://edofo.w2.cmws.fr
 * Twitter: [@Ed0fo](https://twitter.com/Ed0fo)
-* GitHub: [@Edofo](https://github.com/Edofo) [@Mâ_L](https://github.com/Mal_BOY)
+* GitHub: [@Edofo](https://github.com/Edofo) [@Mâ_L](https://github.com/MalB0Y) [@PonchHKT](https://github.com/PonchHKT)
 
 ## Show your support
 
