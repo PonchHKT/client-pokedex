@@ -10,13 +10,14 @@ import "./App.css";
 import Home from "./pages/Home";
 import PokemonI from "./pages/Pokemon";
 
+import musique from "./images/generique-pokemon-saison-1-pokemon-attrapez-les-tous.mp3";
 
 class App extends Component {
   
   render() {
     return (
       <Router>
-        <audio className="music" src="https://www.cjoint.com/doc/18_09/HIkpnJ4y0Fw_generique-francais-de-la-saison-1-de-pokemon.mp3" autoplay="true" loop="false" hidden="true"></audio>  
+        <audio className="music" src={musique} autoplay="true" loop="false" hidden="true"></audio>  
         <div>
           <Switch>
             <Route path="/pokemon/:id" component={PokemonI}>
