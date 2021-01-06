@@ -71,7 +71,8 @@ h2 span:nth-child(8) {
     backdrop-filter: blur(6px);
 	font-size: 1.5em;
 	color: white;
-	padding: 10px 10em 10px 1em;
+    padding: 10px 1em 10px 1em;
+    width: 40%;
     height: 50px;
     border: none;
     border-bottom: 3px solid white;
@@ -173,7 +174,7 @@ a {
         font-size: 5em;
     }
     .searchbar input {
-        padding: 5px 5em 5px 1em;
+        padding: 5px 1em 5px 1em;
     }
 }
 
@@ -185,7 +186,7 @@ a {
 
 @media screen and (max-width: 500px) {
     .searchbar input {
-        padding: 5px 2em 5px 1em;
+        padding: 5px 1em 5px 1em;
         font-size: 1em;
     }
 }
