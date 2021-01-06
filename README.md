@@ -28,18 +28,26 @@
 
 ## Install
 
+> client-pokedex/client
+> client-pokedex/server
 ```sh
 npm install
 ```
 
 ## Usage
 
+> client-pokedex/client
 ```sh
-npm start / node server.js
+npm start
+```
+> client-pokedex/server/src
+```sh
+node server.js
 ```
 
 ## Run tests
 
+> client-pokedex/client
 ```sh
 npm test
 ```
@@ -50,7 +58,7 @@ npm test
 
 * Website: https://edofo.w2.cmws.fr
 * Twitter: [@Ed0fo](https://twitter.com/Ed0fo)
-* GitHub: [@Edofo](https://github.com/Edofo)
+* GitHub: [@Edofo](https://github.com/Edofo) [@Mâ_L](https://github.com/Mal_BOY)
 
 ## Show your support
 
