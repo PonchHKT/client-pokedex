@@ -19,6 +19,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
 }
 
 /* width */
@@ -41,9 +42,3 @@ body {
   background: #0432af;
 }
 
-.music {
-  position: fixed;
-  top: -6em;
-  right: 0;
-  z-index: 2;
-}
