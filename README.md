@@ -49,7 +49,7 @@ npm test
 👤 **Edofo / Mâ_L / PonchHKT**
 
 * Website: https://edofo.w2.cmws.fr
-* Twitter: [@Ed0fo](https://twitter.com/Edof0)
+* Twitter: [@Ed0fo](https://twitter.com/Ed0fo)
 * GitHub: [@Edofo](https://github.com/Edofo)
 
 ## Show your support
